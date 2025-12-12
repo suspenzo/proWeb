@@ -16,7 +16,7 @@
 <?php include("header.php"); ?>
 <div class="centrado">
     <div class="menu-container">
-        <h1>Sistema de Gestión de Usuarios: Admin</h1>
+        <h1>Sistema de Gestión de Usuarios: Invitado</h1>
 
         <div class="menu-links">
             <a href="usuarios.php">Usuarios</a>

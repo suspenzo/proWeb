@@ -57,8 +57,12 @@ try {
 
 <h2>✅ Cuenta verificada</h2>
 <p>Tu correo ha sido verificado correctamente. Ya puedes continuar.</p>
+<?php if($usuario["rol_id"] === 1){ ?>
+    <a href="home.php" class="btn">Continuar</a>
 
-<a href="home.php" class="btn">Continuar</a>
-
+<?php } else { ?>
+    <a href="home2.php" class="btn">Continuar</a>
+    
+<?php }?>
 </body>
 </html>
