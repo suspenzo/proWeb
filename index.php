@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mensaje = "Inicio de sesión correcto. Bienvenido.";
 
-        if ($usuario["rol_id"] === 1) {
+        if ($usuario["rol_id"] == 1) {
             header("Location: home.php");
         } else {
             header("Location: home2.php");
