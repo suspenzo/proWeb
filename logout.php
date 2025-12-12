@@ -8,5 +8,5 @@ $_SESSION = array();
 session_destroy();
 
 // Redirigir al login o página inicial
-header("Location: login.php");
+header("Location: index.php");
 exit;
