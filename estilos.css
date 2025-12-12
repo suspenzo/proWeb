@@ -1,0 +1,379 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+       min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.centrado {
+    flex: 1; /* ocupa todo lo restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===== CONTENEDOR DEL FORMULARIO ===== */
+.login-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== TÍTULO ===== */
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ===== GRUPOS DEL FORMULARIO ===== */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+/* ===== BOTÓN ===== */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #43a047;
+}
+
+/* ===== MENSAJE DE ERROR ===== */
+.mensaje {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* ===== CONTENEDOR GENERAL DEL MENÚ ===== */
+.menu-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+.menu-container h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ===== BOTONES/ENLACES DEL MENÚ ===== */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-links a {
+    display: block;
+    padding: 14px;
+    background: #4CAF50;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    background: #43a047;
+    transform: scale(1.03);
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.page-container {
+    width: 95%;
+    max-width: 900px;
+    background: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== ENLACE VOLVER ===== */
+.back-link {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tr:hover {
+    background: #eaeaea;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    padding: 8px 14px;
+    background: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1976D2;
+}
+
+/* ===== FORMULARIO ===== */
+.campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 4px rgba(76,175,80,0.4);
+}
+
+/* ===== ACCIONES ===== */
+.acciones {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.acciones button {
+    background: #4CAF50;
+    border: none;
+    padding: 12px 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acciones button:hover {
+    background: #43A047;
+}
+
+/* Botón cancelar */
+.acciones .btn {
+    background: #9E9E9E;
+}
+
+.acciones .btn:hover {
+    background: #757575;
+}
+
+/* ===== MENSAJE ===== */
+.mensaje {
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    color: #fff;
+    background: #E53935;
+}
+
+/* ===== CAJA GENERAL (Roles y Permisos) ===== */
+.caja {
+    width: 95%;
+    max-width: 900px;
+    background: #fff;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Enlaces dentro de tablas */
+table a {
+    text-decoration: none;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Textarea estilo */
+.campo textarea {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 80px;
+    font-size: 15px;
+}
+
+.campo textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 4px rgba(76,175,80,0.4);
+}
+
+/* Checkbox listado de permisos */
+.campo label input[type="checkbox"] {
+    transform: scale(1.1);
+    margin-right: 6px;
+}
+
+/*******************************
+        HEADER PROWEB
+*******************************/
+.header {
+    width: 100%;
+    background: #1e1e2f;
+    color: #fff;
+    padding: 15px 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    height: 80px;
+}
+
+/* Lado izquierdo (logo) */
+.header-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Navegación lado derecho */
+.header-right a {
+    margin-left: 25px;
+    color: #cfd0ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.header-right a:hover {
+    color: #ffffff;
+}
+
+/* Botón cerrar sesión */
+.logout {
+    color: #ff6666 !important;
+}
+
+.logout:hover {
+    color: #ffb3b3 !important;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        margin-top: 10px;
+    }
+
+    .header-right a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
