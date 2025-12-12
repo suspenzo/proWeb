@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </header>
     <div class= "centrado">
     <div class="login-container">
-        <h1>Iniciar Sesión</h1>
+        <h1>Iniciar Sesión (Mensaje Prueba)</h1>
 
         <!-- Mensaje PHP -->
         <div class="mensaje">
