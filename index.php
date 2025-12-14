@@ -76,40 +76,51 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>ProWeb</title>
 </head>
 
-
-    
 <body>
-    <header class="header">
-    <div class="header-left">
-        <a href="index.php" class="logo">ProWeb</a>
-    </div>
-</header>
-    <div class= "centrado">
-    <div class="login-container">
-        <h1>Iniciar Sesión (Mensaje Prueba)</h1>
+    <?php include("header.php"); ?>
 
-        <!-- Mensaje PHP -->
-        <div class="mensaje">
-            <?php echo $mensaje ?>
+    <div class="centrado">
+    <div class="index-card" id="index-card">
+
+    <!-- PASO 1 -->
+    <div id="step1" class="step active">
+        <h2>¿Quieres saber qué lenguaje de programación necesitas aprender?</h2>
+        <p>Te ayudamos a escoger el camino correcto según tus intereses.</p>
+        <button onclick="goToStep(2)">Continuar</button>
+    </div>
+
+    <!-- PASO 2 -->
+    <div id="step2" class="step">
+        <h2>¿Qué área te interesa?</h2>
+
+        <div class="options">
+            <label><input type="radio" value="web" onchange="selectArea(this)"> Desarrollo Web</label>
+            <label><input type="radio" value="mobile" onchange="selectArea(this)"> Aplicaciones Móviles</label>
+            <label><input type="radio" value="ai" onchange="selectArea(this)"> Inteligencia Artificial & Ciencia de Datos</label>
+            <label><input type="radio" value="games" onchange="selectArea(this)"> Videojuegos</label>
+            <label><input type="radio" value="desktop" onchange="selectArea(this)"> Software de Escritorio y Empresarial</label>
+            <label><input type="radio" value="embedded" onchange="selectArea(this)"> Sistemas Embebidos y Hardware</label>
+            <label><input type="radio" value="automation" onchange="selectArea(this)"> Automatización y Scripting</label>
         </div>
 
-        <form action="" method="post">
-
-            <div class="form-group">
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <button type="submit" class="btn-primary">Iniciar Sesión</button>
-
-        </form>
-    </div>
+        <button class="secondary" onclick="goToStep(1)">Volver</button>
     </div>
 
-</body>
+    <!-- PASO 3 -->
+    <div id="step3" class="step">
+        <h2>Lenguajes recomendados</h2>
+
+        <div class="options" id="languageOptions"></div>
+
+        <div class="actions">
+            <button class="secondary" onclick="goToStep(2)">Volver</button>
+            <button id="startBtn" disabled>Empezar a aprender</button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="script-index.js"></script>
+
 </html>
